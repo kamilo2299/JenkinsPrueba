@@ -19,7 +19,7 @@ def encode_morse(string):
         resp += char_to_dots.get(element)+" "
     return resp[:-1]
         
-@pytest.mark.parametrize("string,expected",[["EDABBIT CHALLENGE",". -.. .- -... -... .. -   -.-. .... .- .-.. .-.. . -. --. ."],["HELP ME !", ".... . .-.. .--.   -- .   -.-.--"],["CHALLENGE", "-.-. .... .- .-.. .-.. . -. --. ."],["1 APPLE AND 5 CHERRY, 7 SANDWICHES, 2 TABLES, 9 INVITED GUYS ! THAT'S SO COOL...", ".----   .- .--. .--. .-.. .   .- -. -..   .....   -.-. .... . .-. .-. -.-- --..--   --...   ... .- -. -.. .-- .. -.-. .... . ... --..--   ..---   - .- -... .-.. . ... --..--   ----.   .. -. ...- .. - . -..   --. ..- -.-- ...   -.-.--   - .... .- - .----. ...   ... ---   -.-. --- --- .-.. .-.-.- .-.-.- .-.-.-"]])
+@pytest.mark.parametrize("string,expected",[["EDABBIT CHALLENGEfffffffff",". -.. .- -... -... .. -   -.-. .... .- .-.. .-.. . -. --. ."],["HELP ME !", ".... . .-.. .--.   -- .   -.-.--"],["CHALLENGE", "-.-. .... .- .-.. .-.. . -. --. ."],["1 APPLE AND 5 CHERRY, 7 SANDWICHES, 2 TABLES, 9 INVITED GUYS ! THAT'S SO COOL...", ".----   .- .--. .--. .-.. .   .- -. -..   .....   -.-. .... . .-. .-. -.-- --..--   --...   ... .- -. -.. .-- .. -.-. .... . ... --..--   ..---   - .- -... .-.. . ... --..--   ----.   .. -. ...- .. - . -..   --. ..- -.-- ...   -.-.--   - .... .- - .----. ...   ... ---   -.-. --- --- .-.. .-.-.- .-.-.- .-.-.-"]])
 def test(string,expected):
     assert encode_morse(string) == expected
 
